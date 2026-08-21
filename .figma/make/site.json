@@ -1,0 +1,10 @@
+{
+  "description": "Streamline project management by consolidating information from documents, enabling teams to collaborate efficiently and stay organized.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

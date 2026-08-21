@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-surface: #080B0F;
+  --color-base: #0D1218;
+  --color-panel: #111820;
+  --color-card: #151D26;
+  --color-edge: #1a2535;
+  --color-health: #39D98A;
+  --color-warn: #F5B942;
+  --color-risk: #FF5C6C;
+  --color-data: #49C6FF;
+  --color-ink: #E8EFF8;
+  --color-muted: #8899AA;
+  --color-dim: #55687A;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #080B0F;
+  color: #E8EFF8;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a2535 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2535;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes stepIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(73, 198, 255, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(73, 198, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(73, 198, 255, 0); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.4s ease forwards; }
+.animate-slideInRight { animation: slideInRight 0.3s ease forwards; }
+.animate-stepIn { animation: stepIn 0.3s ease forwards; }
+.animate-pulse-ring { animation: pulse-ring 2s ease infinite; }
